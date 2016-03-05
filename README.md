@@ -1,6 +1,7 @@
 python-mailgun2
 ===============
 
+[ ![Codeship Status for albertyw/python-mailgun2](https://codeship.com/projects/ce6c4f80-c4de-0133-efb5-62b97b21679d/status?branch=master)](https://codeship.com/projects/138455)
 [![Code Climate](https://codeclimate.com/github/albertyw/python-mailgun2/badges/gpa.svg)](https://codeclimate.com/github/albertyw/python-mailgun2)
 [![Dependency Status](https://gemnasium.com/albertyw/python-mailgun2.svg)](https://gemnasium.com/albertyw/python-mailgun2)
 
