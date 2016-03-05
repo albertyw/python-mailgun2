@@ -4,19 +4,23 @@ python-mailgun2
 [![Code Climate](https://codeclimate.com/github/albertyw/python-mailgun2/badges/gpa.svg)](https://codeclimate.com/github/albertyw/python-mailgun2)
 [![Dependency Status](https://gemnasium.com/albertyw/python-mailgun2.svg)](https://gemnasium.com/albertyw/python-mailgun2)
 
+Originally at https://github.com/ZeroCater/python-mailgun2
+
 A super simple Python API for interacting with [Mailgun](http://www.mailgun.com/).
 Currently only supports sending messages. Powered by
 [Requests](http://docs.python-requests.org/en/latest/).
 
 Python 3 support should be there but is currently untested.
 
-Installation:
+Installation
+------------
 
 ```shell
 pip install mailgun2
 ```
 
-Usage:
+Usage
+-----
 
 ```python
 from mailgun2 import Mailgun
