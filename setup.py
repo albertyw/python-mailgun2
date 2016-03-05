@@ -1,14 +1,19 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+#!/usr/bin/env python
+from setuptools import setup
 import mailgun2
+
+try:
+    readme = open("README.md")
+    long_description = str(readme.read())
+finally:
+    readme.close()
 
 setup(
     name=mailgun2.__title__,
     packages=[mailgun2.__title__],
     version=mailgun2.__version__,
     description='A python client for Mailgun API v2',
+    long_description=long_description,
     author=mailgun2.__author__,
     author_email='albertyw@mit.edu',
     url='https://github.com/albertyw/python-mailgun2',
@@ -17,8 +22,20 @@ setup(
     install_requires=[
         'requests>=2.6.0',
     ],
+    license='Apache',
     test_suite="tests",
     tests_require=[
         'mock>=0.8',
     ],
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Intended Audience :: Telecommunications Industry',
+        'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
+        'Topic :: Communications :: Email',
+        'Topic :: Software Development :: Libraries :: Python Modules'
+        ],
 )
