@@ -8,6 +8,9 @@ try:
 finally:
     readme.close()
 
+download_url = ("https://github.com/albertyw/python-mailgun2/"
+                "archive/%s.tar.gz") % mailgun2.__version__
+
 setup(
     name=mailgun2.__title__,
     packages=[mailgun2.__title__],
@@ -17,7 +20,7 @@ setup(
     author=mailgun2.__author__,
     author_email='albertyw@mit.edu',
     url='https://github.com/albertyw/python-mailgun2',
-    download_url="https://github.com/albertyw/python-mailgun2/archive/%s.tar.gz" % mailgun2.__version__,
+    download_url=download_url,
     keywords=['mailgun', 'email'],
     install_requires=[
         'requests>=2.6.0',
