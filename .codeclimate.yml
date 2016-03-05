@@ -10,3 +10,7 @@ engines:
     enabled: true
   radon:
     enabled: true
+ratings:
+  paths:
+    - "tests"
+    - "mailgun2"
