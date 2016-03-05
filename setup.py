@@ -10,9 +10,9 @@ setup(
     version=mailgun2.__version__,
     description='A python client for Mailgun API v2',
     author=mailgun2.__author__,
-    author_email='tech@zerocater.com',
-    url='https://github.com/ZeroCater/python-mailgun2',
-    download_url="https://github.com/ZeroCater/python-mailgun2/archive/%s.tar.gz" % mailgun2.__version__,
+    author_email='albertyw@mit.edu',
+    url='https://github.com/albertyw/python-mailgun2',
+    download_url="https://github.com/albertyw/python-mailgun2/archive/%s.tar.gz" % mailgun2.__version__,
     keywords=['mailgun', 'email'],
     install_requires=[
         'requests>=2.6.0',
