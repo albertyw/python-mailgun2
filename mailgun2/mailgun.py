@@ -65,7 +65,7 @@ class Mailgun(object):
         if description:
             data['description'] = description
 
-        if access_level and access_level in ACCESS_LEVELS:
+        if access_level and access_level in Mailgun.ACCESS_LEVELS:
             data['access_level'] = access_level
 
         return self.post('/lists', data, include_domain=False)
