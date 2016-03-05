@@ -6,6 +6,7 @@ BASE_URL = 'https://api.mailgun.net/v2'
 
 
 class Mailgun(object):
+
     def __init__(self, api_key, domain):
         self.auth = ('api', api_key)
         self.base_url = '{0}/{1}'.format(BASE_URL, domain)
@@ -67,7 +68,8 @@ class Mailgun(object):
             data['name'] = name
 
         if params:
-            data['vars'] = json.dumps(params) if isinstance(params, dict) else params
+            data['vars'] = json.dumps(params) if isinstance(
+                params, dict) else params
 
         if not subscribed:
             data['subscribed'] = 'no'

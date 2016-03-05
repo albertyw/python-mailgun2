@@ -5,7 +5,9 @@ from mock import patch, MagicMock
 
 import mailgun2
 
+
 class MailgunTestBase(unittest.TestCase):
+
     def setUp(self):
         self.api_key = 'test_api_key'
         self.domain = 'test.domain'
@@ -18,6 +20,7 @@ class MailgunTestBase(unittest.TestCase):
 
 
 class SendMessageTest(MailgunTestBase):
+
     def test_send_simple_message(self):
         self.mailgun.send_message(
             'from@example.com',
@@ -33,7 +36,8 @@ class SendMessageTest(MailgunTestBase):
         auth = self.mock_post.call_args[1]['auth']
         data = self.mock_post.call_args[1]['data']
         files = self.mock_post.call_args[1]['files']
-        self.assertEqual(url, 'https://api.mailgun.net/v2/test.domain/messages')
+        self.assertEqual(
+            url, 'https://api.mailgun.net/v2/test.domain/messages')
         self.assertEqual(auth, ('api', 'test_api_key'))
         self.assertEqual(files, [])
         self.assertEqual(data['from'], 'from@example.com')
@@ -78,20 +82,20 @@ class SendMessageTest(MailgunTestBase):
             'from@example.com',
             'to@example.com',
             html='Test html',
-            headers={'header':'value'}
+            headers={'header': 'value'}
         )
         data = self.mock_post.call_args[1]['data']
         self.assertEqual(data['h:header'], 'value')
 
     def test_inlines_attachments(self):
         current_path = os.path.abspath(os.path.dirname(__file__))
-        license_file = current_path+'/../LICENSE'
+        license_file = current_path + '/../LICENSE'
         self.mailgun.send_message(
             'from@example.com',
             'to@example.com',
             html='Test html',
             inlines=[license_file],
-            attachments=[('license', 'text', open(license_file,'r'))]
+            attachments=[('license', 'text', open(license_file, 'r'))]
         )
         files = self.mock_post.call_args[1]['files']
         self.assertEqual(files[0][0], 'inline')
