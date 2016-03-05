@@ -7,17 +7,25 @@ BASE_URL = 'https://api.mailgun.net/v2'
 
 class Mailgun(object):
 
+    ACCESS_LEVELS = ['readonly', 'members', 'everyone']
+
     def __init__(self, api_key, domain):
         self.auth = ('api', api_key)
         self.base_url = '{0}/{1}'.format(BASE_URL, domain)
 
     def post(self, path, data, files=None, include_domain=True):
         url = self.base_url if include_domain else BASE_URL
-        return requests.post(url + path, auth=self.auth, data=data, files=files)
+        return requests.post(
+            url + path,
+            auth=self.auth,
+            data=data,
+            files=files
+        )
 
     def send_message(self, from_email, to, cc=None, bcc=None,
                      subject=None, text=None, html=None, tags=None,
-                     reply_to=None, headers=None, inlines=None, attachments=None, campaign_id=None):
+                     reply_to=None, headers=None, inlines=None,
+                     attachments=None, campaign_id=None):
         # sanity checks
         assert (text or html)
 
@@ -48,7 +56,8 @@ class Mailgun(object):
 
         return self.post('/messages', data, files=files)
 
-    def create_list(self, address, name=None, description=None, access_level=None):
+    def create_list(self, address, name=None, description=None,
+                    access_level=None):
         data = {'address': address}
         if name:
             data['name'] = name
@@ -56,7 +65,7 @@ class Mailgun(object):
         if description:
             data['description'] = description
 
-        if access_level and access_level in ['readonly', 'members', 'everyone']:
+        if access_level and access_level in Mailgun.ACCESS_LEVELS:
             data['access_level'] = access_level
 
         return self.post('/lists', data, include_domain=False)
@@ -77,4 +86,5 @@ class Mailgun(object):
         if upsert:
             data['upsert'] = 'yes'
 
-        return self.post('/lists/%s/members' % list_name, data, include_domain=False)
+        url = '/lists/%s/members' % list_name
+        return self.post(url, data, include_domain=False)

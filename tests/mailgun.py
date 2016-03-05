@@ -107,10 +107,40 @@ class SendMessageTest(MailgunTestBase):
 
 
 class CreateListTest(MailgunTestBase):
-    pass
-    # TODO
+
+    def test_create_list(self):
+        self.mailgun.create_list('address', 'name', 'description', 'readonly')
+        data = self.mock_post.call_args[1]['data']
+        self.assertEqual(data['access_level'], 'readonly')
+        self.assertEqual(data['description'], 'description')
+        self.assertEqual(data['name'], 'name')
+        self.assertEqual(data['address'], 'address')
+
+    def test_checks_access_levels(self):
+        self.mailgun.create_list('address', 'name', 'description', 'asdf')
+        data = self.mock_post.call_args[1]['data']
+        self.assertTrue('access_level' not in data)
 
 
 class AddListTest(MailgunTestBase):
-    pass
-    # TODO
+
+    def test_add_list_member(self):
+        self.mailgun.add_list_member('list_name', 'address', 'name', 'params')
+        data = self.mock_post.call_args[1]['data']
+        self.assertEqual(data['address'], 'address')
+        self.assertEqual(data['name'], 'name')
+        self.assertEqual(data['vars'], 'params')
+        self.assertTrue('list_name' in self.mock_post.call_args[0][0])
+
+    def test_json_params(self):
+        self.mailgun.add_list_member('list_name', 'address', 'name',
+                                     {'asdf': 'qwer'})
+        data = self.mock_post.call_args[1]['data']
+        self.assertEqual(data['vars'], '{"asdf": "qwer"}')
+
+    def test_boolean(self):
+        self.mailgun.add_list_member('list_name', 'address', 'name',
+                                     'params', False, True)
+        data = self.mock_post.call_args[1]['data']
+        self.assertEqual(data['subscribed'], 'no')
+        self.assertEqual(data['upsert'], 'yes')
