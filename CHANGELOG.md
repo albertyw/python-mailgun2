@@ -1,3 +1,9 @@
+0.1.6 March 5, 2016
+-------------------
+
+ - Add codeclimate and fix code
+ - Add more tests
+
 0.1.5 March 5, 2016
 -------------------
 
