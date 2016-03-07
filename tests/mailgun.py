@@ -9,9 +9,10 @@ import mailgun2
 class MailgunTestBase(unittest.TestCase):
 
     def setUp(self):
-        self.api_key = 'test_api_key'
+        self.public_key = 'test_public_key'
+        self.private_key = 'test_private_key'
         self.domain = 'test.domain'
-        self.mailgun = mailgun2.Mailgun(self.api_key, self.domain)
+        self.mailgun = mailgun2.Mailgun(self.domain, self.public_key, self.private_key)
         self.post_patcher = patch('mailgun2.mailgun.requests.post')
         self.mock_post = self.post_patcher.start()
 
@@ -37,8 +38,8 @@ class SendMessageTest(MailgunTestBase):
         data = self.mock_post.call_args[1]['data']
         files = self.mock_post.call_args[1]['files']
         self.assertEqual(
-            url, 'https://api.mailgun.net/v2/test.domain/messages')
-        self.assertEqual(auth, ('api', 'test_api_key'))
+            url, 'https://api.mailgun.net/v3/test.domain/messages')
+        self.assertEqual(auth, ('api', 'test_public_key'))
         self.assertEqual(files, [])
         self.assertEqual(data['from'], 'from@example.com')
         self.assertEqual(data['to'], 'to@example.com')
