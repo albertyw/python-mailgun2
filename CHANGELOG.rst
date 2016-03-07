@@ -1,3 +1,9 @@
+0.1.7 March 6, 2016
+-------------------
+
+- Convert docs to ReStructuredText
+- Loosen requests package requirements
+
 0.1.6 March 5, 2016
 -------------------
 
