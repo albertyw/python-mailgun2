@@ -58,7 +58,14 @@ Optional arguments:
     inlines: List of file paths to attach inline to the message
     attachments: List of (file name, content type, file handle) as a multipart attachment
 
+
+Contributing
+------------
+See `Contributing <https://github.com/albertyw/python-mailgun2/blob/master/CONTRIBUTING.rst>`__
+
 Pull requests welcome!
+
+
 
 .. |PyPI| image:: https://img.shields.io/pypi/dm/mailgun2.svg
    :target: https://pypi.python.org/pypi?:action=display&name=mailgun2
