@@ -28,7 +28,7 @@ Usage
 .. code:: python
 
     from mailgun2 import Mailgun
-    mailer = Mailgun('apikey', 'example.mailgun.org')
+    mailer = Mailgun('example.mailgun.org', 'public_key', 'private_key')
     mailer.send_message(
         'from@yourdomain.com',
         ['to@you.com', 'others@you.com'],
