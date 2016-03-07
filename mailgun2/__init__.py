@@ -1,5 +1,5 @@
 __title__ = 'mailgun2'
-__version__ = '0.1.7'
+__version__ = '1.0.0'
 __author__ = 'Albert Wang'
 __license__ = 'Apache 2.0'
 

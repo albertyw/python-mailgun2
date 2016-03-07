@@ -1,3 +1,13 @@
+1.0.0 March 6, 2016
+-------------------
+
+Thanks to @fatisar:
+
+- BREAKING: changed initialization to use public/private key
+- Update to use mailgun v3 endpoints
+- Add several new endpoints
+- Update readmes
+
 0.1.7 March 6, 2016
 -------------------
 
