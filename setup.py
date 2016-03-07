@@ -23,7 +23,7 @@ setup(
     download_url=download_url,
     keywords=['mailgun', 'email'],
     install_requires=[
-        'requests>=2.6.0',
+        'requests>=2.6',
     ],
     license='Apache',
     test_suite="tests",
