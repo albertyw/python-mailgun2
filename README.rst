@@ -13,7 +13,7 @@ A super simple Python API for interacting with
 messages. Powered by
 `Requests <http://docs.python-requests.org/en/latest/>`__.
 
-Python 3 support should be there but is currently untested.
+Works with Python 3!
 
 Installation
 ------------
