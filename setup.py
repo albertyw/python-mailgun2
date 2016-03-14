@@ -28,7 +28,9 @@ setup(
     license='Apache',
     test_suite="tests",
     tests_require=[
+        'codecov>=1.6',
         'mock>=0.8',
+        'tox>=2.3'
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
