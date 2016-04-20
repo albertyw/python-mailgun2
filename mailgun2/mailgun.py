@@ -38,7 +38,7 @@ class Mailgun(object):
     def send_message(self, from_email, to, cc=None, bcc=None,
                      subject=None, text=None, html=None, user_variables=None,
                      reply_to=None, headers=None, inlines=None,
-                     attachments=None, campaign_id=None):
+                     attachments=None, campaign_id=None, tags=None):
         # sanity checks
         assert (text or html)
 
@@ -61,6 +61,9 @@ class Mailgun(object):
 
         if campaign_id:
             data['o:campaign'] = campaign_id
+
+        if tags:
+            data['o:tag'] = tags
 
         if user_variables:
             for k, v in user_variables.items():
