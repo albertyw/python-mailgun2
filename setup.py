@@ -30,6 +30,7 @@ setup(
     tests_require=[
         'codecov>=1.6',
         'mock>=0.8',
+        'codeclimate-test-reporter',
         'tox>=2.3'
     ],
     classifiers=[
