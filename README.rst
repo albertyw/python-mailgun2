@@ -3,7 +3,9 @@ python-mailgun2
 
 |PyPI|
 
-|Codeship Status for albertyw/python-mailgun2| |Code Climate|
+|Codeship Status for albertyw/python-mailgun2|
+|Code Climate|
+|Code Climate Test Coverage|
 |Dependency Status|
 
 Originally at https://github.com/ZeroCater/python-mailgun2
@@ -73,5 +75,7 @@ Pull requests welcome!
    :target: https://codeship.com/projects/138455
 .. |Code Climate| image:: https://codeclimate.com/github/albertyw/python-mailgun2/badges/gpa.svg
    :target: https://codeclimate.com/github/albertyw/python-mailgun2
+.. |Code Climate Test Coverage| image:: https://codeclimate.com/github/albertyw/python-mailgun2/badges/coverage.svg
+   :target: https://codeclimate.com/github/albertyw/python-mailgun2/coverage
 .. |Dependency Status| image:: https://gemnasium.com/albertyw/python-mailgun2.svg
    :target: https://gemnasium.com/albertyw/python-mailgun2
