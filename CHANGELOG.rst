@@ -1,3 +1,15 @@
+Changelog
+=========
+
+1.1.0 May 17, 2016
+------------------
+
+Thanks to @rjmackay
+
+- Support mailgun tags
+- Officially support python 3
+- Switch to CodeClimate test coverage
+
 1.0.0 March 6, 2016
 -------------------
 
