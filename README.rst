@@ -68,6 +68,14 @@ See `Contributing <https://github.com/albertyw/python-mailgun2/blob/master/CONTR
 
 Pull requests welcome!
 
+Distributing
+------------
+
+.. code:: bash
+
+    pip install twine
+    python setup.py sdist bdist_wheel
+    twine upload dist/*
 
 
 .. |PyPI| image:: https://img.shields.io/pypi/v/mailgun2.svg
