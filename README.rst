@@ -87,5 +87,5 @@ Distributing
    :target: https://codeclimate.com/github/albertyw/python-mailgun2
 .. |Code Climate Test Coverage| image:: https://codeclimate.com/github/albertyw/python-mailgun2/badges/coverage.svg
    :target: https://codeclimate.com/github/albertyw/python-mailgun2/coverage
-.. |Dependency Status| image:: https://gemnasium.com/albertyw/python-mailgun2.svg
-   :target: https://gemnasium.com/albertyw/python-mailgun2
+.. |Dependency Status| image:: https://pyup.io/repos/github/albertyw/python-mailgun2/shield.svg
+   :target: https://pyup.io/repos/github/albertyw/python-mailgun2/
