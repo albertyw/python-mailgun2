@@ -18,7 +18,7 @@ setup(
     description='A python client for Mailgun API v2',
     long_description=long_description,
     author=mailgun2.__author__,
-    author_email='albertyw@mit.edu',
+    author_email='git@albertyw.com',
     url='https://github.com/albertyw/python-mailgun2',
     download_url=download_url,
     keywords=['mailgun', 'email'],
