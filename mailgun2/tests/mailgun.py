@@ -1,9 +1,10 @@
+from __future__ import absolute_import
 import os
 import unittest
 
 from mock import patch
 
-import mailgun2
+from .. import Mailgun
 
 
 class MailgunTestBase(unittest.TestCase):
@@ -12,7 +13,7 @@ class MailgunTestBase(unittest.TestCase):
         self.public_key = 'test_public_key'
         self.private_key = 'test_private_key'
         self.domain = 'test.domain'
-        self.mailgun = mailgun2.Mailgun(
+        self.mailgun = Mailgun(
             self.domain,
             self.public_key,
             self.private_key,
@@ -94,7 +95,7 @@ class SendMessageTest(MailgunTestBase):
 
     def test_inlines_attachments(self):
         current_path = os.path.abspath(os.path.dirname(__file__))
-        license_file = current_path + '/../LICENSE'
+        license_file = current_path + '/../../LICENSE'
         self.mailgun.send_message(
             'from@example.com',
             'to@example.com',

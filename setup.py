@@ -26,7 +26,7 @@ setup(
         'requests>=2.6,<3.0',
     ],
     license='Apache',
-    test_suite="tests",
+    test_suite="mailgun2.tests",
     # testing requires flake8 and coverage but they're listed separately
     # because they need to wrap setup.py
     extras_require={
