@@ -1,0 +1,5 @@
+# Testing
+coverage==5.0.3                  # Test coverage
+flake8==3.7.9                    # Python linting
+mock==3.0.5                      # Test mocking and patching
+mypy==0.761                      # Static typing

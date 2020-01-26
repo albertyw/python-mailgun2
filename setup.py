@@ -23,14 +23,16 @@ setup(
     download_url=download_url,
     keywords=['mailgun', 'email'],
     install_requires=[
-        'requests>=2.6',
+        'requests>=2.6,<3.0',
     ],
     license='Apache',
     test_suite="tests",
-    tests_require=[
-        'coverage==5.0.3',
-        'mock==3.0.5',
-    ],
+    # testing requires flake8 and coverage but they're listed separately
+    # because they need to wrap setup.py
+    extras_require={
+        'dev': [],
+        'test': [],
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
