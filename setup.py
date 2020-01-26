@@ -28,7 +28,8 @@ setup(
     license='Apache',
     test_suite="tests",
     tests_require=[
-        'mock>=0.8',
+        'coverage==5.0.3',
+        'mock==3.0.5',
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
