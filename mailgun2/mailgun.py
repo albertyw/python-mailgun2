@@ -145,4 +145,9 @@ class Mailgun(object):
     def validate(self, address):
         params = {'address': address}
         auth = ('api', self.public_key)
-        return self.get('/address/validate', params=params, auth=auth, include_domain=False)
+        return self.get(
+            '/address/validate',
+            params=params,
+            auth=auth,
+            include_domain=False,
+        )

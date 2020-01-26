@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from mock import patch, MagicMock
+from mock import patch
 
 import mailgun2
 
@@ -12,7 +12,11 @@ class MailgunTestBase(unittest.TestCase):
         self.public_key = 'test_public_key'
         self.private_key = 'test_private_key'
         self.domain = 'test.domain'
-        self.mailgun = mailgun2.Mailgun(self.domain, self.public_key, self.private_key)
+        self.mailgun = mailgun2.Mailgun(
+            self.domain,
+            self.public_key,
+            self.private_key,
+        )
         self.post_patcher = patch('mailgun2.mailgun.requests.post')
         self.mock_post = self.post_patcher.start()
 

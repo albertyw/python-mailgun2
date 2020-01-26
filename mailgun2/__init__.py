@@ -4,6 +4,6 @@ __author__ = 'Albert Wang'
 __license__ = 'Apache 2.0'
 
 try:
-    from .mailgun import Mailgun
-except:
+    from .mailgun import Mailgun  # noqa: F401
+except ImportError:
     pass
