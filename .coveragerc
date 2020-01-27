@@ -1,4 +1,6 @@
 [run]
 source=.
 omit =
+  .eggs/*
   setup.py
+  mailgun2/tests/*
