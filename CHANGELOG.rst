@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.1.1 January 26, 2020
+----------------------
+
+ - Refactor a lot of dependencies and packaging
+ - Update dependencies
+ - Better python 3 support
+
 1.1.0 May 17, 2016
 ------------------
 
