@@ -1,8 +1,6 @@
-from __future__ import absolute_import
 import os
 import unittest
-
-from mock import patch
+from unittest.mock import patch
 
 from .. import Mailgun
 
