@@ -1,7 +1,6 @@
 import os
 import unittest
-
-from mock import patch
+from unittest.mock import patch
 
 from .. import Mailgun
 
