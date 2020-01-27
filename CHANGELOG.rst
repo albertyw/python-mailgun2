@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.0.0 January 26, 2020
+----------------------
+
+ - Drop python 2 support
+ - Add mypy type checking
+
 1.1.1 January 26, 2020
 ----------------------
 
