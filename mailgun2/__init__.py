@@ -1,9 +1,5 @@
-__title__ = 'mailgun2'
-__version__ = '1.1.0'
-__author__ = 'Albert Wang'
-__license__ = 'Apache 2.0'
+from __future__ import absolute_import
 
-try:
-    from .mailgun import Mailgun
-except:
-    pass
+from .__version__ import __version__  # noqa: F401
+
+from .mailgun import Mailgun  # noqa: F401

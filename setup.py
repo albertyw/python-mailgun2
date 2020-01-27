@@ -1,38 +1,42 @@
 #!/usr/bin/env python
-from setuptools import setup
-import mailgun2
+# -*- coding: utf-8 -*-
 
-try:
-    readme = open("README.rst")
-    long_description = str(readme.read())
-finally:
-    readme.close()
+from setuptools import setup, find_packages
+from codecs import open
+from os import path
 
-download_url = ("https://github.com/albertyw/python-mailgun2/"
-                "archive/%s.tar.gz") % mailgun2.__version__
+
+# Get the long description from the README file
+here = path.abspath(path.dirname(__file__))
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()
+
+about = {}
+with open(path.join(here, 'mailgun2', '__version__.py')) as f:
+    exec(f.read(), about)
+
 
 setup(
-    name=mailgun2.__title__,
-    packages=[mailgun2.__title__],
-    version=mailgun2.__version__,
+    name='mailgun2',
+    packages=find_packages(exclude=['tests']),
+    version=about['__version__'],
     description='A python client for Mailgun API v2',
     long_description=long_description,
-    author=mailgun2.__author__,
-    author_email='albertyw@mit.edu',
+    author='Albert Wang',
+    author_email='git@albertyw.com',
     url='https://github.com/albertyw/python-mailgun2',
-    download_url=download_url,
     keywords=['mailgun', 'email'],
     install_requires=[
-        'requests>=2.6',
+        'requests>=2.6,<3.0',
     ],
     license='Apache',
-    test_suite="tests",
-    tests_require=[
-        'codecov>=1.6',
-        'mock>=0.8',
-        'codeclimate-test-reporter',
-        'tox>=2.3'
-    ],
+    test_suite="mailgun2.tests",
+    # testing requires flake8 and coverage but they're listed separately
+    # because they need to wrap setup.py
+    extras_require={
+        'dev': [],
+        'test': [],
+    },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',

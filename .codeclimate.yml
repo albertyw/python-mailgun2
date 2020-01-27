@@ -12,5 +12,4 @@ engines:
     enabled: true
 ratings:
   paths:
-    - "tests"
     - "mailgun2"
