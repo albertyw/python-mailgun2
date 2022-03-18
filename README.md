@@ -14,8 +14,6 @@ Originally at <https://github.com/ZeroCater/python-mailgun2>
 A super simple Python API for interacting with [Mailgun](https://www.mailgun.com/). Currently
 only supports sending messages. Powered by [Requests](https://docs.python-requests.org/en/latest/).
 
-Works with Python 3!
-
 ## Installation
 
 ```shell
@@ -37,32 +35,28 @@ mailer.send_message(
 
 Required arguments:
 
-    from_email: string of email address to set as sender
-    to: list or string of email address to send to
+```
+from_email: string of email address to set as sender
+to: list or string of email address to send to
+```
 
 Optional arguments:
 
-    subject: string subject of the email
-    text: string body of the email. Either text or html is required.
-    html: string HTML of the email. Either text or html is required.
-    cc: list of cc addresses.
-    bcc: list of bcc addresses.
-    tags: list of mailgun tags to associate with the email.
-    reply_to: Convenience argument for setting the Reply-To header
-    headers: Extra headers for messages
-    inlines: List of file paths to attach inline to the message
-    attachments: List of (file name, content type, file handle) as a multipart attachment
+```
+subject: string subject of the email
+text: string body of the email. Either text or html is required.
+html: string HTML of the email. Either text or html is required.
+cc: list of cc addresses.
+bcc: list of bcc addresses.
+tags: list of mailgun tags to associate with the email.
+reply_to: Convenience argument for setting the Reply-To header
+headers: Extra headers for messages
+inlines: List of file paths to attach inline to the message
+attachments: List of (file name, content type, file handle) as a multipart attachment
+```
 
 ## Contributing
 
 See [Contributing](https://github.com/albertyw/python-mailgun2/blob/master/CONTRIBUTING.md)
 
 Pull requests welcome!
-
-## Distributing
-
-```bash
-pip install twine
-python setup.py sdist bdist_wheel
-twine upload dist/*
-```
