@@ -22,6 +22,7 @@ setup(
     version=about['__version__'],
     description='A python client for Mailgun API v2',
     long_description=long_description,
+    long_description_content_type='text/x-rst',
     author='Albert Wang',
     author_email='git@albertyw.com',
     url='https://github.com/albertyw/python-mailgun2',
