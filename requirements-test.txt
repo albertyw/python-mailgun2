@@ -1,4 +1,7 @@
 # Testing
 coverage==6.3.2                  # Test coverage
 flake8==4.0.1                    # Python linting
+
+# Types
 mypy==0.941                      # Static typing
+types-requests==2.27.13          # Type annotations for requests package
