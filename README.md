@@ -55,7 +55,7 @@ Optional arguments:
 
 ## Contributing
 
-See [Contributing](https://github.com/albertyw/python-mailgun2/blob/master/CONTRIBUTING.rst)
+See [Contributing](https://github.com/albertyw/python-mailgun2/blob/master/CONTRIBUTING.md)
 
 Pull requests welcome!
 

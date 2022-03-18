@@ -9,7 +9,7 @@ from typing import Dict
 
 # Get the long description from the README file
 here = path.abspath(path.dirname(__file__))
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 about: Dict[str, str] = {}
@@ -23,7 +23,7 @@ setup(
     version=about['__version__'],
     description='A python client for Mailgun API v2',
     long_description=long_description,
-    long_description_content_type='text/x-rst',
+    long_description_content_type='text/markdown',
     author='Albert Wang',
     author_email='git@albertyw.com',
     url='https://github.com/albertyw/python-mailgun2',
