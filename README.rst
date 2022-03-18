@@ -4,7 +4,7 @@ python-mailgun2
 |PyPI|
 |Python Version|
 
-|Codeship Status for albertyw/python-mailgun2|
+|Build Status|
 |Code Climate|
 |Code Climate Test Coverage|
 |Dependency Status|
@@ -81,8 +81,8 @@ Distributing
 .. |PyPI| image:: https://img.shields.io/pypi/v/mailgun2.svg
    :target: https://github.com/albertyw/python-mailgun2
 .. |Python Version| image:: https://img.shields.io/pypi/pyversions/mailgun2.svg
-.. |Codeship Status for albertyw/python-mailgun2| image:: https://codeship.com/projects/ce6c4f80-c4de-0133-efb5-62b97b21679d/status?branch=master
-   :target: https://codeship.com/projects/138455
+.. |Build Status| image:: https://drone.albertyw.com/api/badges/albertyw/python-mailgun2/status.svg
+   :target: https://drone.albertyw.com/albertyw/python-mailgun2
 .. |Code Climate| image:: https://codeclimate.com/github/albertyw/python-mailgun2/badges/gpa.svg
    :target: https://codeclimate.com/github/albertyw/python-mailgun2
 .. |Code Climate Test Coverage| image:: https://codeclimate.com/github/albertyw/python-mailgun2/badges/coverage.svg
